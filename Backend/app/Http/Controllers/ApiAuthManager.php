@@ -11,17 +11,6 @@ use Illuminate\Support\Facades\Validator;
 class ApiAuthManager extends Controller
 {
 
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         try {
@@ -67,7 +56,6 @@ class ApiAuthManager extends Controller
                 'message' => 'tạo tài khoản thất bại'
             ], 500);
         }
-
     }
 
     /**
@@ -77,10 +65,39 @@ class ApiAuthManager extends Controller
     {
         try {
             $request->validate([
-                'phone' => 'required',
-                'password' => 'required',
+                'phone' => 'required|numeric',
+            ]);
+            // $credentials = $request->only('phone', 'password');
+            $user = User::where('phone', $request->phone)->first();
+            $email = $user->email;
+            if ($user) {
+                return response()->json([
+                    'status' => 200,
+                    'message' => '',
+                    'email' => $email,
+                ], 200);
+            } else {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Số điện thoại sai'
+                ], 500);
+            }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th,
+            ], 500);
+        }
+    }
+    public function enterPasswor(Request $request)
+    {
+        try {
+            $request->validate([
+                'phone' => 'required|numeric',
+                'password'=>'required||min:8'
             ]);
             $credentials = $request->only('phone', 'password');
+
             $user = User::where('phone', $request->phone)->first();
             if (Auth::attempt($credentials)) {
                 return response()->json([
@@ -97,11 +114,10 @@ class ApiAuthManager extends Controller
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => false,
-                'message' => 'tạo tài khoản thất bại'
+                'message' => $th,
             ], 500);
         }
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -125,7 +141,7 @@ class ApiAuthManager extends Controller
         return response()->json([
             'status' => true,
             'message' => "Người dùng đăng xuất",
-            'data'=>[],
-        ],200);
+            'data' => [],
+        ], 200);
     }
 }
