@@ -1,0 +1,16 @@
+.Alphabet-wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+.Table-Alphabet{
+    display: inline-block;
+}
+.Alphabet{
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 8px;
+    background-color: aquamarine;
+}
