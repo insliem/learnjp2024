@@ -18,15 +18,15 @@
             <?php $count++; ?>
             <div class="Alphabet-wrap-info">
                 <div class="Alphabet">
-                    <h1 class="Alphabet-JP">{{$value->Hiragana}}</h1>
-                    <p class="Alphabet-Romanji">{{$value->Romanji}}</p>
+                    <h1 class="Alphabet-JP">{{$value["Hiragana"]}}</h1>
+                    <p class="Alphabet-Romanji">{{$value["Romanji"]}}</p>
                 </div>
                 <div class="Alphabet-example">
                     <p>Các từ vựng liên quan</p>
                     <ul>
-                        <li>Aki: sdaaa></>s</li>
-                        <li>Aka: ákdj</li>
-                        <li>Aku: ádasmkd</li>
+                    <li>{{$value["Example"][0]["JP"]}}: {{$value["Example"][0]["VN"]}}</li>
+                    <li>{{$value["Example"][1]["JP"]}}: {{$value["Example"][1]["VN"]}}</li>
+                    <li>{{$value["Example"][2]["JP"]}}: {{$value["Example"][2]["VN"]}}</li>
                     </ul>
                 </div>
             </div>
@@ -51,15 +51,15 @@
                 <?php $countt++; ?>
                 <div class="Alphabet-wrap-info">
                 <div class="Alphabet">
-                    <p class="Alphabet-JP">{{$value->Hiragana}}</p>
-                    <p class="Alphabet-Romanji">{{$value->Romanji}}</p>
+                <h1 class="Alphabet-JP">{{$value["Hiragana"]}}</h1>
+                <p class="Alphabet-Romanji">{{$value["Romanji"]}}</p>
                 </div>
                 <div class="Alphabet-example">
                     <p>Các từ vựng liên quan</p>
                     <ul>
-                        <li>Aki: sdaaa></>s</li>
-                        <li>Aka: ákdj</li>
-                        <li>Aku: ádasmkd</li>
+                        <li>{{$value["Example"][0]["JP"]}}: {{$value["Example"][0]["VN"]}}</li>
+                        <li>{{$value["Example"][1]["JP"]}}: {{$value["Example"][1]["VN"]}}</li>
+                        <li>{{$value["Example"][2]["JP"]}}: {{$value["Example"][2]["VN"]}}</li>
                     </ul>
                 </div>
             </div>
