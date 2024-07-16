@@ -11,6 +11,7 @@ import TabNavigation from './App/Navigations/TabNavigation';
 import SignUp from './App/Screens/SignUpScreen/SignUp';
 import Editprofile from './App/Screens/ProfileScreen/Editprofile';
 import Start from './App/Screens/startScreen/Start';
+import Alphabelt from './App/Screens/AlphabeltScreen/Alphabelt';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -36,7 +37,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Start'>
+        <Stack.Navigator initialRouteName='Login'>
           <Stack.Screen
             name="Login"
             component={Login}
@@ -44,7 +45,7 @@ export default function App() {
               headerShown: false,
             }}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="Start"
             component={Start}
             options={{
@@ -68,6 +69,13 @@ export default function App() {
           <Stack.Screen
             name='Editprofile'
             component={Editprofile}
+            options={{
+              headerShown: false
+            }}
+          />
+          <Stack.Screen
+            name='Alphabelt'
+            component={Alphabelt}
             options={{
               headerShown: false
             }}
