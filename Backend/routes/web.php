@@ -32,5 +32,6 @@ Route::get('/', function () {
     Route::post('/profile/changePassword', [AuthManager::class, 'changePassword'])->name('password.update');
     
     Route::get('/hiragana',[AlphabetManager::class,'GetAlphabetHiragana'])->name('GetHiragana');
+    Route::get('/katakana',[AlphabetManager::class,'GetAlphabetKatakana'])->name('GetKatakana');
 
 

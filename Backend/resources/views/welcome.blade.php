@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Login')
+@section('title', 'login')
 
 @include('include.header')
 @section('content')
