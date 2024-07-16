@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 
 export default function Slider() {
+  const navigation = useNavigation();
   const images = [
     { id: '1', src: require('./../../../assets/images/hira.jpg') },
     { id: '2', src: require('./../../../assets/images/kata.jpg') },
@@ -9,7 +11,7 @@ export default function Slider() {
   ];
 
   const handleImagePress = (id) => {
-    console.log(`Image ${id} pressed!`);
+    navigation.navigate('Alphabelt')
   };
 
   return (
