@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">LearnJP</a>
+    <a class="navbar-brand" href="/">LearnJP</a>
 
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/hiragana">Hiragana</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Katakana</a>
+                <a class="nav-link" href="/katakana">Katakana</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Kanji</a>
