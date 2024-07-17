@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScrollView } from "react-native-gesture-handler";
@@ -7,6 +7,13 @@ import COLOR from '../../../constants/color';
 
 
 const Login1 = ({ navigation }) => {
+    const [change, setChange] = useState(false);
+    const [data, setData] = useState([]);
+  
+    useEffect(() => {
+      console.log("change state updated");
+    }, [change]);
+  
     return (
         <GestureHandlerRootView style={{ flex: 1, backgroundColor: COLOR.white  }}>
             <SafeAreaView style={{ flex: 1, backgroundColor: COLOR.white}}>

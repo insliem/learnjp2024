@@ -1,11 +1,14 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 
 export default function CategoryHome() {
-  const renderCard = (title) => (
-    <View style={styles.card}>
+  const navigation = useNavigation();
+
+  const renderCard = (title, navigateTo) => (
+    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate(navigateTo)}>
       <Text style={styles.cardText}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -15,40 +18,40 @@ export default function CategoryHome() {
         <Text style={styles.headerLink}>Xem tất cả</Text>
       </View>
       <View style={styles.cardContainer}>
-        <View style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Course')}>
           <Image
             source={require('../../../assets/images/alphabet.jpg')}
             style={styles.imgcard}
           />
           <Text style={styles.cardText}>Bảng chữ cái</Text>
           <Text style={styles.cardText1}>Xem tất cả</Text>
-        </View>
-        <View style={styles.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Course')}>
           <Image
             source={require('../../../assets/images/course.jpg')}
             style={styles.imgcard}
           />
-          <Text style={styles.cardText}>Khóa học</Text>
+          <Text style={styles.cardText}>Bài học</Text>
           <Text style={styles.cardText1}>Xem tất cả</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.cardContainer}>
-      <View style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Course')}>
           <Image
             source={require('../../../assets/images/practice.jpg')}
             style={styles.imgcard}
           />
           <Text style={styles.cardText}>Luyện tập</Text>
           <Text style={styles.cardText1}>Xem tất cả</Text>
-        </View>
-        <View style={styles.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Course')}>
           <Image
             source={require('../../../assets/images/achivement.jpg')}
             style={styles.imgcard}
           />
           <Text style={styles.cardText}>Thành tích</Text>
           <Text style={styles.cardText1}>Xem tất cả</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -96,7 +99,6 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     marginBottom: 15,
-
   },
   cardText: {
     fontSize: 18,

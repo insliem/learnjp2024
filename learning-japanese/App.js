@@ -11,6 +11,7 @@ import TabNavigation from './App/Navigations/TabNavigation';
 import SignUp from './App/Screens/SignUpScreen/SignUp';
 import Editprofile from './App/Screens/ProfileScreen/Editprofile';
 import Start from './App/Screens/startScreen/Start';
+import Course from './App/Screens/CoursesScreen/Course';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -44,7 +45,7 @@ export default function App() {
               headerShown: false,
             }}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="Start"
             component={Start}
             options={{
@@ -75,6 +76,13 @@ export default function App() {
           <Stack.Screen
             name='Home'
             component={TabNavigation} // Sử dụng TabNavigation làm màn hình chính
+            options={{
+              headerShown: false
+            }}
+          />
+          <Stack.Screen
+            name='Course'
+            component={Course}
             options={{
               headerShown: false
             }}
