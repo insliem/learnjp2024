@@ -18,7 +18,7 @@ export default function Course() {
             <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
               <FontAwesomeIcon icon={faChevronLeft} style={styles.backIcon} />
             </TouchableOpacity>
-            <Text style={[styles.headerText, { textAlign: 'center' }]}>Bài học</Text>
+            <Text style={[styles.headerText, { textAlign: 'center' }]}>Bài Học</Text>
           </View>
           <View style={styles.searchContainer}>
             <FontAwesomeIcon icon={faSearch} style={styles.searchIcon} />
@@ -29,7 +29,7 @@ export default function Course() {
             />
           </View>
           <View style={styles.cardContainer}>
-            <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Hiragana')}>
+            <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Alphabelt')}>
               <Image
                 source={require('../../../assets/images/Hiragana.png')}
                 style={styles.imgcard}
@@ -77,7 +77,6 @@ export default function Course() {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
-    marginTop: 15,
   },
   header: {
     flexDirection: 'row',
@@ -99,17 +98,17 @@ const styles = StyleSheet.create({
     fontFamily: 'outfit-medium',
     textAlign: 'center',
     flex: 1,
-    marginLeft: -14,
+    marginLeft: -39,
     color: '#000',
   },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 10,
     marginBottom: 15,
     paddingHorizontal: 10,
     backgroundColor: '#f6f6f6',
     borderRadius: 20,
+    padding:6,
   },
   searchIcon: {
     marginRight: 10,

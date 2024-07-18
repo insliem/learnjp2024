@@ -73,13 +73,11 @@ export default function Category() {
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 20,
-        marginTop: 15,
     },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 10,
     },
     backButton: {
         padding: 10,
@@ -94,7 +92,7 @@ const styles = StyleSheet.create({
         fontFamily: 'outfit-medium',
         textAlign: 'center',
         flex: 1,
-        marginLeft:-14,
+        marginLeft:-39,
     },
     headerLink: {
         fontSize: 14,
