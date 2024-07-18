@@ -17,3 +17,46 @@
                 Alphabet_Example[index].setAttribute("style","display:none;");
             });
     }
+
+function ClickHiragana(){
+    let Hiragana = document.querySelector('.alphabet-header-hiragana');
+    let Katakana = document.querySelector('.alphabet-header-katakana');
+    let Kanji = document.querySelector('.alphabet-header-kanji');
+    let HiraganaWrap = document.querySelector('.alphabet-hiragana');
+    let KatakanaWrap = document.querySelector('.alphabet-katakana');
+    let KanjiWrap = document.querySelector('.alphabet-kanji');
+    Hiragana.setAttribute("style","background-color:rgba(255, 255, 255, 0.7)");
+    Katakana.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    Kanji.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    HiraganaWrap.setAttribute("style","display:block");
+    KatakanaWrap.setAttribute("style","display:none");
+    KanjiWrap.setAttribute("style","display:none");
+}
+function ClickKatakana(){
+    let Hiragana = document.querySelector('.alphabet-header-hiragana');
+    let Katakana = document.querySelector('.alphabet-header-katakana');
+    let Kanji = document.querySelector('.alphabet-header-kanji');
+    let HiraganaWrap = document.querySelector('.alphabet-hiragana');
+    let KatakanaWrap = document.querySelector('.alphabet-katakana');
+    let KanjiWrap = document.querySelector('.alphabet-kanji');
+    Hiragana.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    Katakana.setAttribute("style","background-color:rgba(255, 255, 255, 0.7)");
+    Kanji.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    HiraganaWrap.setAttribute("style","display:none");
+    KatakanaWrap.setAttribute("style","display:block");
+    KanjiWrap.setAttribute("style","display:none");
+}
+function ClickKanji(){
+    let Hiragana = document.querySelector('.alphabet-header-hiragana');
+    let Katakana = document.querySelector('.alphabet-header-katakana');
+    let Kanji = document.querySelector('.alphabet-header-kanji');
+    let HiraganaWrap = document.querySelector('.alphabet-hiragana');
+    let KatakanaWrap = document.querySelector('.alphabet-katakana');
+    let KanjiWrap = document.querySelector('.alphabet-kanji');
+    Hiragana.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    Katakana.setAttribute("style","background-color:rgba(255, 255, 255, 0.5)");
+    Kanji.setAttribute("style","background-color:rgba(255, 255, 255, 0.7)");
+    HiraganaWrap.setAttribute("style","display:none");
+    KatakanaWrap.setAttribute("style","display:none");
+    KanjiWrap.setAttribute("style","display:block");
+}
