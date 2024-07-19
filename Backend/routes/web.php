@@ -34,4 +34,6 @@ Route::get('/', function () {
     Route::get('/hiragana',[AlphabetManager::class,'GetAlphabetHiragana'])->name('GetHiragana');
     Route::get('/katakana',[AlphabetManager::class,'GetAlphabetKatakana'])->name('GetKatakana');
 
+    Route::get('/TestManagement', [TestManagementController::class, 'TestManagement']);
+
 
