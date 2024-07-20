@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\excercise;
+use App\Models\Exercise;
 use App\Models\TestManager;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -28,7 +30,7 @@ class TestManagementSeeder extends Seeder
         ];
         foreach($excercise as $value)
         {
-            DB::table('test_management')->insert($value);
+               excercise ::create($value); 
         }
     }
 }
