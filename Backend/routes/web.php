@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlphabetManager;
 use App\Http\Controllers\AuthManager;
+use App\Http\Controllers\LessonsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,5 +34,9 @@ Route::get('/', function () {
     
     Route::get('/hiragana',[AlphabetManager::class,'GetAlphabetHiragana'])->name('GetHiragana');
     Route::get('/katakana',[AlphabetManager::class,'GetAlphabetKatakana'])->name('GetKatakana');
+
+
+    Route::get('/ListLesson',[LessonsController::class,'ShowLesson'])->name('ShowLesson');
+    Route::get('/Lesson/{id}',[LessonsController::class,'Lesson'])->name('Lesson');
 
 
