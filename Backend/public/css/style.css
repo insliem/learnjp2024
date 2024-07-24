@@ -3,8 +3,16 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 ul{
     list-style-type: none;
+}
+.full-screen-bg {
+    background: url('/public/img/backgroundLesson.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 .Alphabet-header h1{
     z-index: 2;

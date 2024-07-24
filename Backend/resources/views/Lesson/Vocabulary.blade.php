@@ -9,13 +9,18 @@
             margin: 0;
             font-family: Open-sans, sans-serif;
         }
+
         .full-screen-bg {
-        background: url({{ asset('img/backgroundLesson.jpeg') }}) no-repeat center center fixed;
-        background-size: cover;
-        height: 100vh; /* Chiều cao 100% của viewport */
-        width: 100%; /* Chiều rộng 100% của viewport */
-        overflow: hidden; /* Nếu cần */
-    }
+            background: url({{ asset('img/backgroundLesson.jpeg') }}) no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            /* Chiều cao 100% của viewport */
+            width: 100%;
+            /* Chiều rộng 100% của viewport */
+            overflow: hidden;
+            /* Nếu cần */
+        }
+
         h1,
         h2,
         h3 {
@@ -118,33 +123,34 @@
         }
     </style>
     <div class="full-screen-bg ">
-        <div class="container bg-light mt-4" >
+        <div class="container bg-light mt-4">
             <div class="mt-4">
-                <h2 class="text-center">Danh sách bài học</h2>
+                <h2 class="text-left">Bài 0{{ $lesson->id }} - Từ vựng</h2>
             </div>
-        <div class="container ">
-            <div class="row">
-                @foreach ($lesson as $lesson)
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <div class="card"
-                            style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({{ asset('img/' . $lesson->imageLesson) }}) ;">
-                            <div class="card-category">Bài {{ $lesson->idLesson }}</div>
-                            <div class="card-description">
-                                <h2>{{ $lesson->title }}- <span style="font-size: 16px"><i>{{ $lesson->Romaji }}</i> </span></h2>
-                                <p>({{ $lesson->Vietnamese }})</p>
-                            </div>
+            <div class="container ">
+                <table class="table ">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Từ Vựng</th>
+                            <th>Hán Tự</th>
+                            <th>Phát âm</th>
+                            <th>Nghĩa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($vocabulary as $vocabularies)
+                            <tr>
+                                <td scope="row">{{ $vocabularies->vocabulary }}</td>
+                                <td>{{ $vocabularies->kanji }}</td>
+                                <td></td>
+                                <td>{{ $vocabularies->Vietnamese }}</td>
+                            </tr>
+                        @endforeach
 
-                 
-                    <a class="card-link" href="{{ route('Lesson' , ['id' => $lesson->idLesson])}}"></a>
-                    {{-- <a href="">Xem chi tiết bài học</a> --}}
-                        </div>
-                    </div>
-                    
-                @endforeach
-                
 
-        </div>
-        
+                    </tbody>
+                </table>
+
             </div>
 
 

@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->integer('idLesson');
             $table->string('vocabulary');
+            $table->string('kanji');
+            $table->string('Romaji');
             $table->string('Vietnamese');
-            $table->string('vioce');
+            $table->string('voice');
             $table->timestamps();
         });
     }

@@ -38,5 +38,11 @@ Route::get('/', function () {
 
     Route::get('/ListLesson',[LessonsController::class,'ShowLesson'])->name('ShowLesson');
     Route::get('/Lesson/{id}',[LessonsController::class,'Lesson'])->name('Lesson');
+    Route::get('/Vocabulary/{id}',[LessonsController::class,'Vocabulary'])->name('Vocabulary');
+    Route::get('/Conversations/{id}',[LessonsController::class,'Conversations'])->name('Conversations');
+    Route::get('/voicetalk/{id}',[LessonsController::class,'voicetalk'])->name('voicetalk');
+
+
+    Route::get('/checkvoice',[LessonsController::class,'checkvoice'])->name('checkvoice');
 
 

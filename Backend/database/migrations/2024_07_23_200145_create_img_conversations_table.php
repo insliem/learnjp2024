@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('conversations', function (Blueprint $table) {
+        Schema::create('img_conversations', function (Blueprint $table) {
             $table->id();
-            $table->integer('idLesson'); // Khóa ngoại tham chiếu đến bài học
             $table->integer('conversation'); 
-            $table->string('speaker'); // Người nói
-            $table->text('sentence'); // Câu
-            $table->text('Vietnamese')->nullable(); // Nghĩa
-            $table->integer('sentence_order'); // Thứ tự câu
+            $table->integer('idLesson'); // Khóa ngoại tham chiếu đến bài học
+            $table->string('ImgConversation'); 
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('conversations');
+        Schema::dropIfExists('img_conversations');
     }
 };
