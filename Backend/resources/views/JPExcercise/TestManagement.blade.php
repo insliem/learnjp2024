@@ -5,7 +5,7 @@
 
 @include('include.header')
 @section('content')
-<div class="Alphabet-wrap Alphabet-Hiragana">
+<div class="">
 <h1>Danh sách Bài Test</h1>
         <table>
             <thead>
